@@ -1,6 +1,7 @@
 package study.mutable_Immutable;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Resumes {
@@ -12,5 +13,9 @@ public class Resumes {
 
   public Resume getResume(int idx){
     return this.resumes.get(idx);
+  }
+
+  public List<Resume> getResumes(){
+    return Collections.unmodifiableList(this.resumes);
   }
 }
